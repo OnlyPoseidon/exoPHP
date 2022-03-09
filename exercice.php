@@ -1,3 +1,13 @@
+Les variables avec un nom valide sont: $a, $1a, $a1
+
+<?php
+    $a = "42";
+    $b = 42;
+    $c = 'Hello World!';
+    echo "$a $b $c"
+  ?>
+
+
 <?php
     $note_maths = 15;
     $note_francais = 12;
@@ -11,4 +21,9 @@
     $tva = 20;
     $prix_ttc = $prix_ht + ($prix_ht * ($tva / 100));
     echo 'Le prix TTC du produit est de '.$prix_ttc.' €.';
+  ?>
+
+<?php
+    $test = 42;
+    var_dump(strval($test))
   ?>
