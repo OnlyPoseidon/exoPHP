@@ -25,45 +25,55 @@ Les variables avec un nom valide sont: $a, $1a, $a1
 
 // EXERCICE 2
 
-$sexe = "pouet";
-if ($sexe === "pouet") {
-    echo 'c\'est bien pouet';
-} else {
-    echo 'RIP pas de pouet';
-}
-echo "\n";
-echo "\n";
+    $sexe = "pouet";
+    if ($sexe === "pouet") {
+        echo 'c\'est bien pouet';
+    } else {
+        echo 'RIP pas de pouet';
+    }
+    echo "\n";
+    echo "\n";
 
-$budget = 1553.89;
-$achats = 1554.76;
-if ($budget >= $achats) {
-    echo 'opération reussi avec succes';
-} else {
-    echo 'opération résulte d\'une erreur';
-}
-echo "\n";
-echo "\n";
+    $budget = 1553.89;
+    $achats = 1554.76;
+    if ($budget >= $achats) {
+        echo 'opération reussi avec succes';
+    } else {
+        echo 'opération résulte d\'une erreur';
+    }
+    echo "\n";
+    echo "\n";
 
-$age = readline('Quel âge as-tu : ');
-if ($age >= 18) {
-    echo 'Vous etes majeure';
-} elseif ($age < 18) {
-    echo 'vous etes un sous fifre';
-}
-echo "\n";
-echo "\n";
+    $age = readline('Quel âge as-tu : ');
+    if ($age >= 18) {
+        echo 'Vous etes majeure';
+    } elseif ($age < 18) {
+        echo 'vous etes un sous fifre';
+    }
+    echo "\n";
+    echo "\n";
 
-$heure = (int)readline('Quel heure est t\'il ? : ');
-if (7 < $heure && $heure <= 12) {
-    echo "c'est le matin";
-} elseif (12 < $heure && $heure < 17) {
-    echo "c'est l'apres-midi";
-} elseif ((18 < $heure && $heure < 24) || (0 <= $heure && $heure < 7)){
-    echo "c'est la nuit";
-} else {
-    echo "erreur donne un chiffre compris entre 0 et 24";
-}
+    $heure = (int)readline('Quel heure est t\'il ? : ');
+    if (7 < $heure && $heure <= 12) {
+        echo "c'est le matin";
+    } elseif (12 < $heure && $heure < 17) {
+        echo "c'est l'apres-midi";
+    } elseif ((18 < $heure && $heure < 24) || (0 <= $heure && $heure < 7)){
+        echo "c'est la nuit";
+    } else {
+        echo "erreur donne un chiffre compris entre 0 et 24";
+    }
+    echo "\n";
+    echo "\n";
 */
 
+// EXERCICE 3
+
+$codepostal = 77000;
+while($codepostal <= 77999) {
+    echo ' ' , $codepostal++;
+}
+echo "\n";
+echo "\n";
 
 ?>
