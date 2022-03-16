@@ -175,20 +175,112 @@ if(in_array(42, $tab)) {
 echo "\n";
 echo "\n";
 
-*/
-
-$tab = [
-    rand(0, 50),
-    rand(0, 50),
-    rand(0, 50),
-    rand(0, 50),
-    rand(0, 50),
-    rand(0, 50),
-    rand(0, 50),
-    rand(0, 50),
-    rand(0, 50),
-    rand(0, 50),
+$tabprincipale = [
+    rand(0, 100),
+    rand(0, 100),
+    rand(0, 100),
+    rand(0, 100),
+    rand(0, 100),
+    rand(0, 100),
+    rand(0, 100),
+    rand(0, 100),
+    rand(0, 100),
+    rand(0, 100),
 ];
 
-var_dump($tab);
+$tab1 = [];
+$tab2 = [];
+
+foreach ($tabprincipale as $numero) {
+    if ($numero < 50) {
+        $tab1[] = $numero;
+    } else {
+        $tab2[] = $numero;
+    }
+}
+
+echo 'tableau < 50 : ';
+foreach ($tab1 as $numero1) {
+    echo $numero1 . " ";
+}
+echo "\n";
+
+echo 'tableau > 50 : ';
+foreach ($tab2 as $numero2) {
+    echo $numero2 . " ";
+}
+echo "\n";
+
+echo "\n";
+echo "\n";
+
+$pays_population = [
+    'France' => 67595000,
+    'Suede' => 9998000,
+    'Suisse' => 8417000,
+    'Kosovo' => 1820631,
+    'Malte' => 434403,
+    'Mexique' => 122273500,
+    'Allemagne' => 82800000,
+];
+
+echo 'les pays qui ont une population supérieur ou égales a 20M d\'habitant : ';
+foreach($pays_population as $pays => $population) {
+    if($population >= 20000000) {
+        echo "\n - $pays";
+    }
+}
+
+echo "\n";
+echo "\n";
+
+$pays_population = [
+    'France' => 67595000,
+    'Suede' => 9998000,
+    'Suisse' => 8417000,
+    'Kosovo' => 1820631,
+    'Malte' => 434403,
+    'Mexique' => 122273500,
+    'Allemagne' => 82800000,
+];
+
+var_dump(count($pays_population));
+
+echo "\n";
+echo "\n";
+
+$cocktails = [
+    'Mojito',
+    'Long Island Iced Tea',
+    'Gin Fizz',
+    'Moscow mule',
+];
+
+echo $cocktails[1]
+
+echo "\n";
+echo "\n";
+
+$personnes = [
+    'Jean' => 16,
+    'Manuel' => 19,
+    'André' => 66,
+];
+
+echo $personnes['Manuel'];
+
+echo "\n";
+echo "\n";
+
+*/
+
+// EXERCICE 6
+/*
+header('Location: test');
+
+echo "\n";
+echo "\n";
+
+$_SERVER['SERVER_PROTOCOL']
+*/
 ?>
