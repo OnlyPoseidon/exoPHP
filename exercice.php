@@ -21,11 +21,9 @@ Les variables avec un nom valide sont: $a, $1a, $a1
 
     $test = 42;
     var_dump(strval($test))
-
-echo "\n";
-echo "\n";
 */
 
+// ======================================
 // EXERCICE 2
 /*
     $sexe = "pouet";
@@ -34,8 +32,7 @@ echo "\n";
     } else {
         echo 'RIP pas de pouet';
     }
-echo "\n";
-echo "\n";
+------------------
 
     $budget = 1553.89;
     $achats = 1554.76;
@@ -44,8 +41,7 @@ echo "\n";
     } else {
         echo 'opération résulte d\'une erreur';
     }
-echo "\n";
-echo "\n";
+------------------
 
     $age = readline('Quel âge as-tu : ');
     if ($age >= 18) {
@@ -53,8 +49,7 @@ echo "\n";
     } elseif ($age < 18) {
         echo 'vous etes un sous fifre';
     }
-echo "\n";
-echo "\n";
+------------------
 
     $heure = (int)readline('Quel heure est t\'il ? : ');
     if (7 < $heure && $heure <= 12) {
@@ -66,25 +61,22 @@ echo "\n";
     } else {
         echo "erreur donne un chiffre compris entre 0 et 24";
     }
-echo "\n";
-echo "\n";
 */
 
+// ======================================
 // EXERCICE 3
 /*
     $codepostal = 77000;
     while($codepostal <= 77999) {
         echo ' ' , $codepostal++;
     }
-echo "\n";
-echo "\n";
+------------------
 
 
     for($multi = 0; $multi <= 10; $multi++) {
         echo '5 x ' . $multi . " = " . (5 * $multi) . "\n";
     }
-echo "\n";
-echo "\n";
+------------------
 
     for($numero = 1; $numero <= 5; $numero++) {
         for($suite = 1; $suite <= $numero; $suite++) {
@@ -92,8 +84,7 @@ echo "\n";
         }
         echo "\n";
     }
-echo "\n";
-echo "\n";
+------------------
 
 $pouet = 0;
 while($pouet < 20) {
@@ -104,10 +95,9 @@ while($pouet < 20) {
         echo $pouet . "\n";
     }
 }
-echo "\n";
-echo "\n";
 */
 
+// ======================================
 // EXERCICE 4
 /*
     for ($etoile = 1; $etoile <= 8; $etoile++) {
@@ -116,8 +106,7 @@ echo "\n";
         }
         echo "\n";
     }
-echo "\n";
-echo "\n";
+------------------
 
     for ($etoile = 1; $etoile <= 8; $etoile++) {
         for($suite = 1; $suite <= 8; $suite++) {
@@ -125,8 +114,7 @@ echo "\n";
         }
         echo "\n";
     }
-echo "\n";
-echo "\n";
+------------------
 
     for ($etoile = 8; $etoile >= 0; $etoile--) {
         for($suite = 1; $suite <= $etoile; $suite++) {
@@ -134,10 +122,9 @@ echo "\n";
         }
         echo "\n";
     }
-echo "\n";
-echo "\n";
 */
 
+// ======================================
 // EXERCICE 5
 /*
     $geo = [
@@ -148,261 +135,337 @@ echo "\n";
     foreach($geo as $capitale) {
         echo $capitale . "\n";
     }
-echo "\n";
-echo "\n";
+------------------
 
-$tab = [
-    rand(0, 50),
-    rand(0, 50),
-    rand(0, 50),
-    rand(0, 50),
-    rand(0, 50),
-    rand(0, 50),
-    rand(0, 50),
-    rand(0, 50),
-    rand(0, 50),
-    rand(0, 50),
-];
+    $tab = [
+        rand(0, 50),
+        rand(0, 50),
+        rand(0, 50),
+        rand(0, 50),
+        rand(0, 50),
+        rand(0, 50),
+        rand(0, 50),
+        rand(0, 50),
+        rand(0, 50),
+        rand(0, 50),
+    ];
 
-var_dump($tab);
+    var_dump($tab);
 
-if(in_array(42, $tab)) {
-    echo "chiffre 42 trouvé";
-}else {
-    echo "chiffre 42 non trouvé";
-}
-
-echo "\n";
-echo "\n";
-
-$tabprincipale = [
-    rand(0, 100),
-    rand(0, 100),
-    rand(0, 100),
-    rand(0, 100),
-    rand(0, 100),
-    rand(0, 100),
-    rand(0, 100),
-    rand(0, 100),
-    rand(0, 100),
-    rand(0, 100),
-];
-
-$tab1 = [];
-$tab2 = [];
-
-foreach ($tabprincipale as $numero) {
-    if ($numero < 50) {
-        $tab1[] = $numero;
-    } else {
-        $tab2[] = $numero;
+    if(in_array(42, $tab)) {
+        echo "chiffre 42 trouvé";
+    }else {
+        echo "chiffre 42 non trouvé";
     }
-}
 
-echo 'tableau < 50 : ';
-foreach ($tab1 as $numero1) {
-    echo $numero1 . " ";
-}
-echo "\n";
+------------------
 
-echo 'tableau > 50 : ';
-foreach ($tab2 as $numero2) {
-    echo $numero2 . " ";
-}
-echo "\n";
+    $tabprincipale = [
+        rand(0, 100),
+        rand(0, 100),
+        rand(0, 100),
+        rand(0, 100),
+        rand(0, 100),
+        rand(0, 100),
+        rand(0, 100),
+        rand(0, 100),
+        rand(0, 100),
+        rand(0, 100),
+    ];
 
-echo "\n";
-echo "\n";
+    $tab1 = [];
+    $tab2 = [];
 
-$pays_population = [
-    'France' => 67595000,
-    'Suede' => 9998000,
-    'Suisse' => 8417000,
-    'Kosovo' => 1820631,
-    'Malte' => 434403,
-    'Mexique' => 122273500,
-    'Allemagne' => 82800000,
-];
-
-echo 'les pays qui ont une population supérieur ou égales a 20M d\'habitant : ';
-foreach($pays_population as $pays => $population) {
-    if($population >= 20000000) {
-        echo "\n - $pays";
+    foreach ($tabprincipale as $numero) {
+        if ($numero < 50) {
+            $tab1[] = $numero;
+        } else {
+            $tab2[] = $numero;
+        }
     }
-}
 
-echo "\n";
-echo "\n";
+    echo 'tableau < 50 : ';
+    foreach ($tab1 as $numero1) {
+        echo $numero1 . " ";
+    }
+    echo "\n";
 
-$pays_population = [
-    'France' => 67595000,
-    'Suede' => 9998000,
-    'Suisse' => 8417000,
-    'Kosovo' => 1820631,
-    'Malte' => 434403,
-    'Mexique' => 122273500,
-    'Allemagne' => 82800000,
-];
+    echo 'tableau > 50 : ';
+    foreach ($tab2 as $numero2) {
+        echo $numero2 . " ";
+    }
+    echo "\n";
 
-var_dump(count($pays_population));
+    ------------------
 
-echo "\n";
-echo "\n";
+    $pays_population = [
+        'France' => 67595000,
+        'Suede' => 9998000,
+        'Suisse' => 8417000,
+        'Kosovo' => 1820631,
+        'Malte' => 434403,
+        'Mexique' => 122273500,
+        'Allemagne' => 82800000,
+    ];
 
-$cocktails = [
-    'Mojito',
-    'Long Island Iced Tea',
-    'Gin Fizz',
-    'Moscow mule',
-];
+    echo 'les pays qui ont une population supérieur ou égales a 20M d\'habitant : ';
+    foreach($pays_population as $pays => $population) {
+        if($population >= 20000000) {
+            echo "\n - $pays";
+        }
+    }
 
-echo $cocktails[1]
+    ------------------
 
-echo "\n";
-echo "\n";
+    $pays_population = [
+        'France' => 67595000,
+        'Suede' => 9998000,
+        'Suisse' => 8417000,
+        'Kosovo' => 1820631,
+        'Malte' => 434403,
+        'Mexique' => 122273500,
+        'Allemagne' => 82800000,
+    ];
 
-$personnes = [
-    'Jean' => 16,
-    'Manuel' => 19,
-    'André' => 66,
-];
+    var_dump(count($pays_population));
 
-echo $personnes['Manuel'];
+    ------------------
 
-echo "\n";
-echo "\n";
+    $cocktails = [
+        'Mojito',
+        'Long Island Iced Tea',
+        'Gin Fizz',
+        'Moscow mule',
+    ];
 
+    echo $cocktails[1]
+
+    ------------------
+
+    $personnes = [
+        'Jean' => 16,
+        'Manuel' => 19,
+        'André' => 66,
+    ];
+
+    echo $personnes['Manuel'];
 */
 
+// ======================================
 // EXERCICE 6
 /*
-header('Location: test');
+    header('Location: test');
 
-echo "\n";
-echo "\n";
+    ------------------
 
-$_SERVER['SERVER_PROTOCOL']
+    $_SERVER['SERVER_PROTOCOL']
 
-echo "\n";
-echo "\n";
+    ------------------
 
-$tab = array_unique ($tab)
+    $tab = array_unique ($tab)
+*/
 
+// ======================================
 // EXERCICE 7
-
-function helloworld() {
-    echo "Hello World!";
-}
-
-helloworld();
-
-echo "\n";
-echo "\n";
-
-function quiEstLeMeilleurProf($nom){
-    echo "Le prof de " . $nom;
-}
-
-quiEstLeMeilleurProf('programmation Web');
-
-echo "\n";
-echo "\n";
-
-function jeRetourneMonArgument($argument){
-    return $argument;
-}
-
-echo jeRetourneMonArgument("abc");
-
-echo "\n";
-echo "\n";
-
-function fonction(string $argument1 , string $argument2) {
-    return $argument1 . " " . $argument2;
-}
-
-echo fonction("Antoine" , "Griezmann");
-
-echo "\n";
-echo "\n";
-
-function somme(int $argument1 , int $argument2) {
-    return $argument1 + $argument2;
-}
-
-echo somme(5 , 5);
-
-echo "\n";
-echo "\n";
-
-function soustraction (int $argument1 , int $argument2) {
-    return $argument1 - $argument2;
-}
-
-echo soustraction(5 , 5);
-
-echo "\n";
-echo "\n";
-
-function multiplication (int $argument1 , int $argument2) {
-    return $argument1 * $argument2;
-}
-
-echo multiplication(5 , 5);
-
-echo "\n";
-echo "\n";
-
-function estIlMajeure(int $age) {
-    if ($age >= 18) {
-        return true;
-    } else {
-        return false;
+/*
+    function helloworld() {
+        echo "Hello World!";
     }
-}
 
-$age = readline("Quel age as-tu ?");
-var_dump(estIlMajeure($age)) ;
+    helloworld();
 
-echo "\n";
-echo "\n";
+    ------------------
 
-function plusGrand(int $nb1 , int $nb2) {
-    if ($nb1 > $nb2) {
-        return $nb1;
-    } else {
-        return $nb2;
+    function quiEstLeMeilleurProf($nom){
+        echo "Le prof de " . $nom;
     }
-}
 
-echo plusGrand(18 , 20);
+    quiEstLeMeilleurProf('programmation Web');
 
-echo "\n";
-echo "\n";
+    ------------------
 
-function plusPetit(int $nb1 , int $nb2) {
-    if ($nb1 < $nb2) {
-        return $nb1;
-    } else {
-        return $nb2;
+    function jeRetourneMonArgument($argument){
+        return $argument;
     }
-}
 
-echo plusPetit(18 , 20);
+    echo jeRetourneMonArgument("abc");
 
-echo "\n";
-echo "\n";
+    ------------------
 
-function plusPetit(int $nb1 , int $nb2 , int $nb3) {
-    if ($nb1 < $nb2 && $nb1 < $nb3) {
-        return $nb1;
-    } elseif ($nb2 < $nb3 && $nb2 < $nb3) {
-        return $nb2;
-    } else {
-        return $nb3;
+    function fonction(string $argument1 , string $argument2) {
+        return $argument1 . " " . $argument2;
     }
-}
 
-echo plusPetit(18 , 12, 19);
+    echo fonction("Antoine" , "Griezmann");
+
+    ------------------
+
+    function somme(int $argument1 , int $argument2) {
+        return $argument1 + $argument2;
+    }
+
+    echo somme(5 , 5);
+
+    ------------------
+
+    function soustraction (int $argument1 , int $argument2) {
+        return $argument1 - $argument2;
+    }
+
+    echo soustraction(5 , 5);
+
+    ------------------
+
+    function multiplication (int $argument1 , int $argument2) {
+        return $argument1 * $argument2;
+    }
+
+    echo multiplication(5 , 5);
+
+    ------------------
+
+    function estIlMajeure(int $age) {
+        if ($age >= 18) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    $age = readline("Quel age as-tu ?");
+    var_dump(estIlMajeure($age)) ;
+
+    ------------------
+
+    function plusGrand(int $nb1 , int $nb2) {
+        if ($nb1 > $nb2) {
+            return $nb1;
+        } else {
+            return $nb2;
+        }
+    }
+
+    echo plusGrand(18 , 20);
+
+    ------------------
+
+    function plusPetit(int $nb1 , int $nb2) {
+        if ($nb1 < $nb2) {
+            return $nb1;
+        } else {
+            return $nb2;
+        }
+    }
+
+    echo plusPetit(18 , 20);
+
+    ------------------
+
+    function plusPetit(int $nb1 , int $nb2 , int $nb3) {
+        if ($nb1 < $nb2 && $nb1 < $nb3) {
+            return $nb1;
+        } elseif ($nb2 < $nb3 && $nb2 < $nb3) {
+            return $nb2;
+        } else {
+            return $nb3;
+        }
+    }
+    echo plusPetit(18 , 12, 19);
+*/
+
+// ======================================
+// EXERCICE 8
+/*
+    $array = [
+        8 => "clients",
+        10 => "notes",
+        12 => "poids",
+    ];
+    function premierElementTableau(array $argument){
+        if (empty ($argument)) {
+            return null;
+        } else {
+            return array_slice($argument, 0, 1)[0];;
+        }
+    }
+
+    echo premierElementTableau($array);
+
+    ------------------
+
+    $array = [
+        8 => "clients",
+        10 => "notes",
+        12 => "poids",
+    ];
+    function dernierElementTableau(array $argument){
+        if (empty ($argument)) {
+            return null;
+        } else {
+            return end($argument);
+        }
+    }
+
+    echo dernierElementTableau($array);
+
+    ------------------
+
+    $array = [
+        8,
+        10,
+        12,
+    ];
+    function plusGrand(array $argument){
+        if (empty ($argument)) {
+            return null;
+        } else {
+            return max($argument);
+        }
+    }
+
+    echo plusGrand($array);
+
+    ------------------
+
+    $array = [
+        8,
+        10,
+        12,
+    ];
+    function plusPetit(array $argument){
+        if (empty ($argument)) {
+            return null;
+        } else {
+            return min($argument);
+        }
+    }
+
+    echo plusPetit($array);
+
+    ------------------
+
+    function verificationPassword(string $argument){
+        if (strlen($argument) < 8) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    var_dump (verificationPassword("password"));
+    
+    ------------------
+
+
+                ***********************
+                ****REGEX compliqué****
+                ***********************
+
+    function verificationPassword(string $argument){
+        if (strlen($argument) < 8 && )
+
+    ------------------
+
+    
 */
 ?>
