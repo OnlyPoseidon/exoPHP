@@ -282,5 +282,127 @@ echo "\n";
 echo "\n";
 
 $_SERVER['SERVER_PROTOCOL']
+
+echo "\n";
+echo "\n";
+
+$tab = array_unique ($tab)
+
+// EXERCICE 7
+
+function helloworld() {
+    echo "Hello World!";
+}
+
+helloworld();
+
+echo "\n";
+echo "\n";
+
+function quiEstLeMeilleurProf($nom){
+    echo "Le prof de " . $nom;
+}
+
+quiEstLeMeilleurProf('programmation Web');
+
+echo "\n";
+echo "\n";
+
+function jeRetourneMonArgument($argument){
+    return $argument;
+}
+
+echo jeRetourneMonArgument("abc");
+
+echo "\n";
+echo "\n";
+
+function fonction(string $argument1 , string $argument2) {
+    return $argument1 . " " . $argument2;
+}
+
+echo fonction("Antoine" , "Griezmann");
+
+echo "\n";
+echo "\n";
+
+function somme(int $argument1 , int $argument2) {
+    return $argument1 + $argument2;
+}
+
+echo somme(5 , 5);
+
+echo "\n";
+echo "\n";
+
+function soustraction (int $argument1 , int $argument2) {
+    return $argument1 - $argument2;
+}
+
+echo soustraction(5 , 5);
+
+echo "\n";
+echo "\n";
+
+function multiplication (int $argument1 , int $argument2) {
+    return $argument1 * $argument2;
+}
+
+echo multiplication(5 , 5);
+
+echo "\n";
+echo "\n";
+
+function estIlMajeure(int $age) {
+    if ($age >= 18) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+$age = readline("Quel age as-tu ?");
+var_dump(estIlMajeure($age)) ;
+
+echo "\n";
+echo "\n";
+
+function plusGrand(int $nb1 , int $nb2) {
+    if ($nb1 > $nb2) {
+        return $nb1;
+    } else {
+        return $nb2;
+    }
+}
+
+echo plusGrand(18 , 20);
+
+echo "\n";
+echo "\n";
+
+function plusPetit(int $nb1 , int $nb2) {
+    if ($nb1 < $nb2) {
+        return $nb1;
+    } else {
+        return $nb2;
+    }
+}
+
+echo plusPetit(18 , 20);
+
+echo "\n";
+echo "\n";
+
+function plusPetit(int $nb1 , int $nb2 , int $nb3) {
+    if ($nb1 < $nb2 && $nb1 < $nb3) {
+        return $nb1;
+    } elseif ($nb2 < $nb3 && $nb2 < $nb3) {
+        return $nb2;
+    } else {
+        return $nb3;
+    }
+}
+
+echo plusPetit(18 , 12, 19);
 */
 ?>
