@@ -458,25 +458,68 @@ while($pouet < 20) {
 
 
                 ***********************
-                ****REGEX compliqué****
+                *REGEX ultra compliqué*
                 ***********************
 
     function verificationPassword(string $argument){
         if (strlen($argument) < 8 && )
 
     ------------------
-*/
-    function capital(string $argument) {
-        switch ($argument) {
-            case 0:
-                echo "i égal 0";
-                break;
-            case 1:
-                echo "i égal 1";
-                break;
-            case 2:
-                echo "i égal 2";
-                break;
+
+    function capital(string $pays) {
+        switch ($pays) {
+            case "France":
+                return "Paris";
+            case "Allemagne":
+                return "Berlin";
+            case "italie":
+                return "Rome";
+            case "Maroc":
+                return "Rabat";
+            case "Espagne":
+                return "Madrid";
+            case "Portugal":
+                return "Lisbonne";
+            case "Angleterre":
+                return "Londres";
+            default:
+                return "Inconnu";
         }
     }
-?>
+
+    var_dump(capital("France"));
+
+    ------------------
+
+    function listHTML(string $title , array $tab) {
+        if ($title == null) {
+            return null;
+        } elseif (empty($tab)) {
+            return null;
+        }
+        $str = "<h3>" . $title . "</h3>";
+        foreach ($tab as $pays) {
+            $str = $str . "<li>" . $pays . "</li>";
+        }
+        return $str;
+    }
+
+    echo listHTML("capitale" , ["Paris", "Berlin", "Moscou"]);
+    
+    ------------------
+
+    $etudiant = [
+        'Albert' => [12, 8, 9, 7, 13],
+        'Michel' => [14, 13, 12, 11, 10],
+        'Vincent' => [17, 16, 15, 18, 13],
+    ];
+    /*foreach($etudiant as $nom => $notes) {
+        echo $nom . "=>";
+        foreach($notes as $mat => $note) {
+            echo $note . " ";
+        }
+        echo "\n";
+    }/*
+    var_dump($etudiant);
+    */
+?> 
